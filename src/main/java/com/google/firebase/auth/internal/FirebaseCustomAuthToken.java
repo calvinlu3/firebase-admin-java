@@ -38,7 +38,7 @@ public final class FirebaseCustomAuthToken extends IdToken {
 
   static final String FIREBASE_AUDIENCE =
       "https://identitytoolkit.googleapis.com/google.identity.identitytoolkit.v1.IdentityToolkit";
-  static final long TOKEN_DURATION_SECONDS = 3600L; // 1 hour
+  static final long TOKEN_DURATION_SECONDS = 60L; // 1 hour
 
   public FirebaseCustomAuthToken(
       Header header, Payload payload, byte[] signatureBytes, byte[] signedContentBytes) {

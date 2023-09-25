@@ -205,7 +205,7 @@ public class FirebaseMessagingSnippets {
     // [START android_message]
     Message message = Message.builder()
         .setAndroidConfig(AndroidConfig.builder()
-            .setTtl(3600 * 1000) // 1 hour in milliseconds
+            .setTtl(60 * 1000) // 1 hour in milliseconds
             .setPriority(AndroidConfig.Priority.NORMAL)
             .setNotification(AndroidNotification.builder()
                 .setTitle("$GOOG up 1.43% on the day")
@@ -263,7 +263,7 @@ public class FirebaseMessagingSnippets {
             .setBody("$GOOG gained 11.80 points to close at 835.67, up 1.43% on the day.")
             .build())
         .setAndroidConfig(AndroidConfig.builder()
-            .setTtl(3600 * 1000)
+            .setTtl(60 * 1000)
             .setNotification(AndroidNotification.builder()
                 .setIcon("stock_ticker_update")
                 .setColor("#f45342")

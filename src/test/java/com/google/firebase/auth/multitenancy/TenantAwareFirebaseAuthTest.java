@@ -83,7 +83,7 @@ public class TenantAwareFirebaseAuthTest {
     GenericJson parsed = parseRequestContent(interceptor);
     assertEquals(2, parsed.size());
     assertEquals("testToken", parsed.get("idToken"));
-    assertEquals(new BigDecimal(3600), parsed.get("validDuration"));
+    assertEquals(new BigDecimal(60), parsed.get("validDuration"));
     checkUrl(interceptor, AUTH_BASE_URL + ":createSessionCookie");
   }
 
@@ -119,7 +119,7 @@ public class TenantAwareFirebaseAuthTest {
     GenericJson parsed = parseRequestContent(interceptor);
     assertEquals(2, parsed.size());
     assertEquals("testToken", parsed.get("idToken"));
-    assertEquals(new BigDecimal(3600), parsed.get("validDuration"));
+    assertEquals(new BigDecimal(60), parsed.get("validDuration"));
     checkUrl(interceptor, AUTH_BASE_URL + ":createSessionCookie");
   }
 

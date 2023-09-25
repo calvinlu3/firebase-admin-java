@@ -110,7 +110,7 @@ class TestTokenFactory {
     payload.setIssuer(issuer);
     payload.setAudience(PROJECT_ID);
     payload.setIssuedAtTimeSeconds(CLOCK.currentTimeMillis() / 1000);
-    payload.setExpirationTimeSeconds(CLOCK.currentTimeMillis() / 1000 + 3600);
+    payload.setExpirationTimeSeconds(CLOCK.currentTimeMillis() / 1000 + 60);
     payload.setSubject(UID);
     return payload;
   }

@@ -62,7 +62,7 @@ public class StorageClientIT {
     StorageClient storage = StorageClient.getInstance(IntegrationTestUtils.ensureDefaultApp());
     Bucket bucket = storage.bucket();
     Blob blob = createTextBlob(bucket, "Signed URL Test");
-    URL url = blob.signUrl(3600, TimeUnit.SECONDS);
+    URL url = blob.signUrl(60, TimeUnit.SECONDS);
     try (InputStream in = url.openStream()) {
       String result = CharStreams.toString(new InputStreamReader(in));
       assertEquals("Signed URL Test", result);
